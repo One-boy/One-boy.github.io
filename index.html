@@ -2,11 +2,61 @@
 
 <html>
 <head>
-<title>胡渝的主页</title>
+<title>我的主页</title>
 <meta charset="utf-8">
+<meta name="viewport" content="use-scalable = no; width = device-width; height = device-height; maximum-scale = 1.0;">
 </head>
 <body>
-<h1>hi</h1>
+<div class="header">
+    <h1>胡渝的主页</h1>
+</div>
+<div class="main_container">   
+    <h2>小游戏</h2> 
+    <ul>
+        <li>
+            <h5>大鱼喂小鱼</h5>
+            <a href="fishEatFruits/index.html">点我试玩</a>
+        </li>
+        <li>
+            <h5>2048</h5>
+            <a href="2048/index.html">点我试玩</a>
+        </li>
+    </ul>
+</div>
+<div class="footer">
+    <p title="求美术设计。。。">没错，就是这么简单```</p>
+</div>
 </body>
-
+<style>
+html{
+    font-size:100%; /* 16px */
+    color:#607d8b;
+}
+.header{
+   
+    border-bottom:1px solid #e2e2e2;
+}
+.main_container{
+    padding:2rem;
+    text-align:center;
+}
+.main_container ul{
+    list-style:none;
+    width:10rem;
+    margin:0 auto;
+    padding-left:0;
+}
+.main_container ul li{
+    padding-bottom:1rem;
+    border-bottom:1px solid #a29e9e;
+}
+li > a{
+    text-decoration: none;
+}
+.footer{
+   
+    border-top:1px solid #e2e2e2;
+    text-align:center;
+}
+</style>
 </html>
