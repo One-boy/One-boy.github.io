@@ -81,7 +81,7 @@ Base.prototype.drawMaxScore = function(){
     ctx.textAlign = "center";  //水平对齐
     ctx.textBaseline = "middle";  //垂直对齐方式
 
-    ctx.font = "bold 1rem sans-serif";
+    ctx.font = "bold 2rem sans-serif";
     ctx.fillStyle = "#9E9E9E";
     ctx.fillText(maxScoreText,x+w/2,y+h*1/4,w);
     ctx.fillStyle = "white";
