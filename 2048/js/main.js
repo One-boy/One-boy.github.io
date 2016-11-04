@@ -21,7 +21,7 @@ var getDevicePixelRatio = function (){
 }
 
 main.prototype.init = function(){
-    alert("ratio = "+getDevicePixelRatio())
+    //alert("ratio = "+getDevicePixelRatio())
     this.windowInit();  
     event = new Event();
     event.init();
@@ -39,8 +39,8 @@ main.prototype.windowInit =function(){
     var width = document.body.clientWidth;
     var height = document.body.clientHeight;
     if (width < 600 || height < 800){
-        cw = canvas.width = width;
-        ch = canvas.height = height;
+        cw = canvas.width = width*2;
+        ch = canvas.height = height*2;
     }else{
         cw = canvas.width = 600;
         ch = canvas.height = 800;
