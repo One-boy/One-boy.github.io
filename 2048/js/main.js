@@ -16,12 +16,8 @@ var main = function(){
 
 }
 
-var getDevicePixelRatio = function (){
-        return window.devicePixelRatio || 1;
-}
-
 main.prototype.init = function(){
-    //alert("ratio = "+getDevicePixelRatio())
+   
     this.windowInit();  
     event = new Event();
     event.init();
@@ -39,6 +35,7 @@ main.prototype.windowInit =function(){
     var width = document.body.clientWidth;
     var height = document.body.clientHeight;
     if (width < 600 || height < 800){
+        //这里，让canvas的宽高设置为canvas 节点css属性的2倍，以匹配手机高分辨率屏幕。
         cw = canvas.width = width*2;
         ch = canvas.height = height*2;
         canvas.style.width = width + "px";
