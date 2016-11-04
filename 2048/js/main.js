@@ -16,8 +16,12 @@ var main = function(){
 
 }
 
+var getDevicePixelRatio = function (){
+        return window.devicePixelRatio || 1;
+}
+
 main.prototype.init = function(){
-    
+    alert("ratio = ",getDevicePixelRatio())
     this.windowInit();  
     event = new Event();
     event.init();
