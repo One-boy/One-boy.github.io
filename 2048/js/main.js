@@ -41,6 +41,8 @@ main.prototype.windowInit =function(){
     if (width < 600 || height < 800){
         cw = canvas.width = width*2;
         ch = canvas.height = height*2;
+        canvas.style.width = width + "px";
+        canvas.style.height = height + "px";
     }else{
         cw = canvas.width = 600;
         ch = canvas.height = 800;
