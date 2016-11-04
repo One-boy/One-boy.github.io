@@ -36,7 +36,7 @@ Base.prototype.drawTitle = function(){
 
     ctx.save();
 
-    ctx.font = "bold 4rem sans-serif";
+    ctx.font = "bold 40px sans-serif";
     ctx.fillStyle = "white";
     ctx.textAlign = "center";  //水平对齐
     ctx.textBaseline = "middle";  //垂直对齐方式
@@ -59,11 +59,11 @@ Base.prototype.drawScore = function(){
     ctx.textAlign = "center";  //水平对齐
     ctx.textBaseline = "middle";  //垂直对齐方式
 
-    ctx.font = "bold 2rem sans-serif";
+    ctx.font = "bold 20px sans-serif";
     ctx.fillStyle = "#9E9E9E";
     ctx.fillText(score,x+w/2,y+h*1/4,w);
     ctx.fillStyle = "white";
-    ctx.font = "bold 3rem sans-serif";
+    ctx.font = "bold 30px sans-serif";
     ctx.fillText(data.score,x+w/2,y+h*3/4,w);
     ctx.restore(); 
 }
@@ -81,11 +81,11 @@ Base.prototype.drawMaxScore = function(){
     ctx.textAlign = "center";  //水平对齐
     ctx.textBaseline = "middle";  //垂直对齐方式
 
-    ctx.font = "bold 2rem sans-serif";
+    ctx.font = "bold 20px sans-serif";
     ctx.fillStyle = "#9E9E9E";
     ctx.fillText(maxScoreText,x+w/2,y+h*1/4,w);
     ctx.fillStyle = "white";
-    ctx.font = "bold 3rem sans-serif";
+    ctx.font = "bold 30px sans-serif";
     ctx.fillText(data.maxScore,x+w/2,y+h*3/4,w);
     ctx.restore(); 
 }
@@ -94,7 +94,7 @@ Base.prototype.drawMaxScore = function(){
 Base.prototype.gameOver = function(){
     ctx.save();
     
-    ctx.font = "bold 4rem sans-serif";
+    ctx.font = "bold 40px sans-serif";
     ctx.textAlign = "center";  //水平对齐
     ctx.textBaseline = "middle";  //垂直对齐方式
     ctx.shadowBlur = 5;

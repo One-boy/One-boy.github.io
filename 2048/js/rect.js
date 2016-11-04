@@ -66,7 +66,7 @@ Rect.prototype.drawSmallRect = function(){
             ctx.save();
             ctx.textAlign = "center";  //水平对齐
             ctx.textBaseline = "middle";  //垂直对齐方式
-            ctx.font = "bold 3.6rem sans-serif";
+            ctx.font = "bold 36px sans-serif";
             ctx.fillStyle = "white";
             ctx.fillText(obj.num,obj.tx,obj.ty,this.width);
             ctx.restore();
