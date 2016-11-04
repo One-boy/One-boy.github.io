@@ -4,6 +4,9 @@
 
 var Base = function(){
     this.title = "2048"; //标题
+    this.titleSize = 35 * pixelRatio;
+    this.scoreSize = 25 * pixelRatio;
+    this.textSize = 20 * pixelRatio;
 }
 
 Base.prototype.init = function(){
@@ -36,7 +39,7 @@ Base.prototype.drawTitle = function(){
 
     ctx.save();
 
-    ctx.font = "bold 40px sans-serif";
+    ctx.font = "bold "+this.titleSize+"px sans-serif";
     ctx.fillStyle = "white";
     ctx.textAlign = "center";  //水平对齐
     ctx.textBaseline = "middle";  //垂直对齐方式
@@ -59,11 +62,11 @@ Base.prototype.drawScore = function(){
     ctx.textAlign = "center";  //水平对齐
     ctx.textBaseline = "middle";  //垂直对齐方式
 
-    ctx.font = "bold 20px sans-serif";
-    ctx.fillStyle = "#9E9E9E";
+     ctx.font = "bold "+this.textSize+"px sans-serif";
+    ctx.fillStyle = "#FFFFF0";
     ctx.fillText(score,x+w/2,y+h*1/4,w);
     ctx.fillStyle = "white";
-    ctx.font = "bold 30px sans-serif";
+    ctx.font = "bold "+this.scoreSize+"px sans-serif";
     ctx.fillText(data.score,x+w/2,y+h*3/4,w);
     ctx.restore(); 
 }
@@ -81,11 +84,11 @@ Base.prototype.drawMaxScore = function(){
     ctx.textAlign = "center";  //水平对齐
     ctx.textBaseline = "middle";  //垂直对齐方式
 
-    ctx.font = "bold 20px sans-serif";
-    ctx.fillStyle = "#9E9E9E";
+    ctx.font = "bold "+this.textSize+"px sans-serif";
+    ctx.fillStyle = "#FFFFF0";
     ctx.fillText(maxScoreText,x+w/2,y+h*1/4,w);
     ctx.fillStyle = "white";
-    ctx.font = "bold 30px sans-serif";
+    ctx.font = "bold "+this.scoreSize+"px sans-serif";
     ctx.fillText(data.maxScore,x+w/2,y+h*3/4,w);
     ctx.restore(); 
 }
@@ -93,17 +96,15 @@ Base.prototype.drawMaxScore = function(){
 //gameover
 Base.prototype.gameOver = function(){
     ctx.save();
-    
-    ctx.font = "bold 40px sans-serif";
+    rect.drawBack("rgba(0,0,0,0.6)");
+    ctx.font = "bold "+this.titleSize+"px sans-serif";
     ctx.textAlign = "center";  //水平对齐
     ctx.textBaseline = "middle";  //垂直对齐方式
+    ctx.shadowColor = "gray";
     ctx.shadowBlur = 5;
     ctx.shadowOffsetX = 5;
     ctx.shadowOffsetY = 5;
-    console.log("filltext gameover1")
     ctx.fillStyle = "white";
     ctx.fillText("GAME OVER",cw/2,ch/2);
-    
     ctx.restore();
-     console.log("filltext gameover2")
 }
