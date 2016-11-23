@@ -21,6 +21,7 @@ main.prototype.init = function(){
     eventObj = new Event();
     eventObj.init();
     data = new Data();
+    data.init();
     rect = new Rect();
     rect.init();
     base = new Base();
@@ -69,6 +70,7 @@ main.prototype.draw = function(){
             console.log("gameover!");
             base.gameOver();
             eventObj.stopTouchmove();
+            data.updateMaxScore();//更新最高分
         }
 
 }

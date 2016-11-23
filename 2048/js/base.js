@@ -14,6 +14,8 @@ Base.prototype.init = function(){
     this.drawTitle();
     this.drawScore();
     this.drawMaxScore();
+    this.drawRestart();
+   // this.drawBack();
 }
 //标题分割线
 Base.prototype.drawDivideLine = function(){
@@ -51,7 +53,7 @@ Base.prototype.drawTitle = function(){
 //积分
 Base.prototype.drawScore = function(){
     var x = cw*0.4;
-    var y = ch*0.05;
+    var y = ch*0.025;
     var w = cw*0.25;
     var h = ch*0.1;
     var score = "得分"
@@ -62,7 +64,7 @@ Base.prototype.drawScore = function(){
     ctx.textAlign = "center";  //水平对齐
     ctx.textBaseline = "middle";  //垂直对齐方式
 
-     ctx.font = "bold "+this.textSize+"px sans-serif";
+    ctx.font = "bold "+this.textSize+"px sans-serif";
     ctx.fillStyle = "#FFFFF0";
     ctx.fillText(score,x+w/2,y+h*1/4,w);
     ctx.fillStyle = "white";
@@ -73,7 +75,7 @@ Base.prototype.drawScore = function(){
 //最高分
 Base.prototype.drawMaxScore = function(){
     var x = cw*0.7;
-    var y = ch*0.05;
+    var y = ch*0.025;
     var w = cw*0.25;
     var h = ch*0.1;
     var maxScoreText = "最高记录"
@@ -93,6 +95,64 @@ Base.prototype.drawMaxScore = function(){
     ctx.restore(); 
 }
 
+//重新开始按钮
+Base.prototype.drawRestart = function(){
+    var x = cw*0.7;
+    var y = ch*0.14;
+    var w = cw*0.25;
+    var h = ch*0.05;
+    var maxScoreText = "重来"
+    rect.drawRect(x,y,w,h,"#6495ED")
+
+    ctx.save();
+    
+    ctx.textAlign = "center";  //水平对齐
+    ctx.textBaseline = "middle";  //垂直对齐方式
+
+    ctx.font = "bold "+this.textSize+"px sans-serif";
+    ctx.fillStyle = "#FFFFF0";
+    ctx.fillText(maxScoreText,x+w/2,y+h*1/2,w);
+    ctx.restore(); 
+}
+//是否在重新开始按钮内
+Base.prototype.isInRestart = function(x1,y1){
+    var x = cw*0.7;
+    var y = ch*0.14;
+    var w = cw*0.25;
+    var h = ch*0.05;
+    ctx.beginPath();
+    ctx.rect(x,y,w,h);
+    return ctx.isPointInPath(x1,y1);
+}
+//回退
+Base.prototype.drawBack = function(){
+    var x = cw*0.4;
+    var y = ch*0.14;
+    var w = cw*0.25;
+    var h = ch*0.05;
+    var score = "回退"
+    rect.drawRect(x,y,w,h,"#797676")
+
+    ctx.save();
+    
+    ctx.textAlign = "center";  //水平对齐
+    ctx.textBaseline = "middle";  //垂直对齐方式
+
+    ctx.font = "bold "+this.textSize+"px sans-serif";
+    ctx.fillStyle = "#FFFFF0";
+    ctx.fillText(score,x+w/2,y+h*1/2,w);
+    ctx.restore(); 
+}
+//是否在回退按钮内
+Base.prototype.isInBack = function(x1,y1){
+    var x = cw*0.4;
+    var y = ch*0.14;
+    var w = cw*0.25;
+    var h = ch*0.05;
+    ctx.beginPath();
+    ctx.rect(x,y,w,h);
+    return ctx.isPointInPath(x1,y1);
+}
 //gameover
 Base.prototype.gameOver = function(){
     ctx.save();
