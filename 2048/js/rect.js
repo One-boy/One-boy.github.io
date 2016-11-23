@@ -30,7 +30,7 @@ var Rect = function(){
     this.isMoved = true; //记录一帧是否移动过，没移动过，就不产生新的小方块
 }
 
-Rect.prototype.num = 3; //有多少行和列,4x4
+Rect.prototype.num = 4; //有多少行和列,4x4
 
 Rect.prototype.init = function(){
     this.drawBack();
