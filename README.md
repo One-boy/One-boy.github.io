@@ -1,7 +1,9 @@
-# huyu.github.io
+# One-boy.github.io
 
-My website!
+我的github.io个人静态网站！
 
-我的个人静态网站！
+- 尝试下github.io怎么玩
 
-[GO](https://one-boy.github.io)
+- 地址：https://one-boy.github.io
+
+[去看看](https://one-boy.github.io)
