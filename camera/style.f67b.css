@@ -2081,3 +2081,19 @@ p {
   width: 100%;
 }
 
+.camcorder-wrap .camcorder-fun {
+  position: relative;
+}
+.camcorder-wrap .camcorder-fun .camcorder-video {
+  visibility: hidden;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.camcorder-wrap .camcorder-fun .camcorder-canvas {
+  width: 100%;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 0;
+}
+
